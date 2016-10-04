@@ -41,11 +41,11 @@ var browserSyncRewriteRules = [{
 }];
 
 var project = {
-    year: pkg.name.split('-')[0],
-    clientCode: pkg.name.split('-')[1].toUpperCase(),
-    jobCode: pkg.name.split('-')[2],
+    // year: pkg.name.split('-')[0],
+    // clientCode: pkg.name.split('-')[1].toUpperCase(),
+    // jobCode: pkg.name.split('-')[2],
     get name() {
-        return this.year + this.clientCode + this.jobCode;
+        return pkg.name;
     },
     get title() {
         // return this.clientCode + ' ' + this.jobCode + ' ' + pkg.title;
