@@ -1,4 +1,4 @@
-/* global TimelineMax, Power4, EB, EBG */
+/* global TimelineLite, Power4, EB, EBG */
 
 // Broadcast Events shim
 // ====================================================================================================
@@ -29,7 +29,7 @@ var timeline = (function MasterTimeline() {
     }
 
     function createTimeline() {
-        tl = new TimelineMax({delay: 0.25, onStart: updateStart, onComplete: updateComplete, onUpdate: updateStats});
+        tl = new TimelineLite({delay: 0.25, onStart: updateStart, onComplete: updateComplete, onUpdate: updateStats});
         // ---------------------------------------------------------------------------
 
         tl.add('frame1')
