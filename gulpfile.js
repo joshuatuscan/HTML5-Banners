@@ -48,9 +48,10 @@ var project = {
         return this.year + this.clientCode + this.jobCode;
     },
     get title() {
-        return this.clientCode + ' ' + this.jobCode + ' ' + pkg.title;
+        // return this.clientCode + ' ' + this.jobCode + ' ' + pkg.title;
+        return pkg.title;
     },
-    review_template: 'https://github.com/misega/HTML5-Banners-Review-Site'
+    review_template: 'https://github.com/joshuatuscan/HTML5-Banners-Review-Site'
 };
 
 /* Setup: Initial values from banner boilerplate
@@ -472,12 +473,12 @@ gulp.task('preflight:package.json', false, function() {
     var errorTitle = gutil.colors.bgRed.white.bold('  package.json  ') + '\n\nRequired Project Information:\n';
     var errorNote = '\nProject information will be displayed\non the generated review page.\nView ' + gutil.colors.cyan.italic('README.md') + ' for more details\n\n';
 
-    if (pkg.name === defaults.name || !pkg.name.length || !pkg.name.match(/\b(\d{2}[-]?[a-z]{3}[-]?\d{4})\b/)) {
-        errors.push(gutil.colors.red('\u2718') + gutil.colors.bold(' name') + ': required format ' + gutil.colors.cyan('YY-aaa-9999') + '\n');
-        errors.push('  - YY: 2-digit Year\n');
-        errors.push('  - aaa: 3-digit Client Code\n');
-        errors.push('  - 9999: 4-digit Job Code\n');
-    }
+    // if (pkg.name === defaults.name || !pkg.name.length || !pkg.name.match(/\b(\d{2}[-]?[a-z]{3}[-]?\d{4})\b/)) {
+    //     errors.push(gutil.colors.red('\u2718') + gutil.colors.bold(' name') + ': required format ' + gutil.colors.cyan('YY-aaa-9999') + '\n');
+    //     errors.push('  - YY: 2-digit Year\n');
+    //     errors.push('  - aaa: 3-digit Client Code\n');
+    //     errors.push('  - 9999: 4-digit Job Code\n');
+    // }
 
     if (pkg.title === defaults.title || !pkg.title.length) {
         errors.push(gutil.colors.red('\u2718') + gutil.colors.bold(' title') + ': missing\n');
