@@ -7,11 +7,15 @@
     <meta name="ad.size" content="width={{width}}, height={{height}}">
     <title>Ad Banner: {{width}}x{{height}}</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--<script>var clickTag = "http://www.google.com";</script>-->
+
+    <!-- if doubleclick, add this attribute to btn-overlay href="javascript:window.open(window.clickTag)" -->
 </head>
 
 <body>
 <div id="ad">
-    <button id="clickthrough-button" class="btn-overlay"></button>
+    <a id="clickthrough-button" class="btn-overlay"></a>
     <div class="banner" style="display:none">
         <div class="frame" id="frame1">
             <div class="frame1-text">3</div>
