@@ -229,8 +229,8 @@ gulp.task('review', 'build review page from banner directories', ['review:build'
     sequence('browserSync', done);
 });
 
-// pull remote template file, merge and put into `review` folder
-gulp.task('review:build', false, ['preflight:package.json', 'preflight:directory-check', 'preflight:banners-fallback-image', 'review-template:build'], function(done) {
+// pull remote template file, merge and put into `review` folder, removed this preflight check 'preflight:banners-fallback-image'
+gulp.task('review:build', false, ['preflight:package.json', 'preflight:directory-check', 'review-template:build'], function(done) {
     watchFolder = 'review';
 
     // remove support files from the `assets` folder before copying
